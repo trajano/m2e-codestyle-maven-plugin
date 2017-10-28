@@ -14,8 +14,8 @@
   <description>M2E 1.0+ compatible to configure code-style and save-actions for Eclipse.  It provides JDT based formatter that runs from a Maven build as well.</description>
   <url>http://site.trajano.net/m2e-codestyle-maven-plugin</url>
   <scm>
-    <connection>scm:git:https://github.com/trajano/${project.artifactId}</connection>
-    <developerConnection>scm:git:ssh://git@github.com/trajano/${project.artifactId}.git</developerConnection>
+    <connection>scm:git:https://github.com/trajano/${repo.id}.git</connection>
+    <developerConnection>scm:git:https://github.com/trajano/${repo.id}.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
   <distributionManagement>
