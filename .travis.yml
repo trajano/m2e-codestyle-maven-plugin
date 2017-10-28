@@ -1,6 +1,7 @@
 branches:
   only:
   - master
+  - "/^m2e-codestyle-maven-plugin-[\\d\\.]+$/"
 language: java
 jdk:
 - oraclejdk8
@@ -13,12 +14,12 @@ addons:
   apt:
     packages:
     - graphviz
-  sonarcloud:
-    token:
-      secure: l45J1abRLCWp3CxqT+x8J76COCsjY6HUuBgHeycgrtkwSZyjV595+CncHAmHaSBuTSxc0FH3npNLOUDZyIvXXDxYvJ0nALKdvF6tsT4BTqABNl0/PS2WaBOk3FHDs50nd16jGpC5zV+NPIus+8YarjVMmK7z9nYpv23MCoGpXYk=
   ssh_known_hosts:
   - github.com
   - site.trajano.net:6022
+  sonarcloud:
+    token:
+      secure: l45J1abRLCWp3CxqT+x8J76COCsjY6HUuBgHeycgrtkwSZyjV595+CncHAmHaSBuTSxc0FH3npNLOUDZyIvXXDxYvJ0nALKdvF6tsT4BTqABNl0/PS2WaBOk3FHDs50nd16jGpC5zV+NPIus+8YarjVMmK7z9nYpv23MCoGpXYk=
 env:
   global:
     secure: f4I6mz3SxSKIRECe3I+wA/HWmWgwvAqGQdjeTpi+tBOmjyz6GE5rbY1ozUbdHzBvog2IJAzbfRiUF5PEzhpNzqyIRqrxKIy1ahlnGzxV9MIn3hUBzLStvSMKlIJIrPlHf77+1bXNqOqpZzxj2GLlgs34ey8QkITmgPKIaPm/eV4=
@@ -28,6 +29,7 @@ before_install:
 - tar xf deploy-keys.tar -C $HOME
 install:
 - tar xf deploy-keys.tar -C $HOME && chmod go-rwx -R $HOME/.m2 $HOME/.ssh
+- mvn dependency:go-offline
 before_script:
 - mvn clean
 script:
