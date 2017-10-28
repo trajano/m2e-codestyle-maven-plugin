@@ -8,7 +8,7 @@
   </parent>
   <groupId>net.trajano.mojo</groupId>
   <artifactId>m2e-codestyle-maven-plugin</artifactId>
-  <version>3.0.0</version>
+  <version>3.0.1-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
   <name>Maven M2E Code Style plugin</name>
   <description>M2E 1.0+ compatible to configure code-style and save-actions for Eclipse.  It provides JDT based formatter that runs from a Maven build as well.</description>
@@ -16,7 +16,7 @@
   <scm>
     <connection>scm:git:https://github.com/trajano/${repo.id}.git</connection>
     <developerConnection>scm:git:https://github.com/trajano/${repo.id}.git</developerConnection>
-    <tag>m2e-codestyle-maven-plugin-3.0.0</tag>
+    <tag>HEAD</tag>
   </scm>
   <distributionManagement>
     <site>
@@ -230,7 +230,7 @@
                         </goals>
                       </pluginExecutionFilter>
                       <action>
-                        <execute/>
+                        <execute />
                       </action>
                     </pluginExecution>
                   </pluginExecutions>
