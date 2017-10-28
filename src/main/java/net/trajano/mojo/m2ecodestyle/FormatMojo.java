@@ -40,7 +40,6 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 
 import net.trajano.mojo.m2ecodestyle.internal.EolNormalizingStream;
-import net.trajano.mojo.m2ecodestyle.internal.PreferenceFileName;
 
 @Mojo(name = "format",
     defaultPhase = LifecyclePhase.PROCESS_SOURCES,
@@ -60,8 +59,9 @@ public class FormatMojo extends AbstractMojo {
      * </p>
      * <p>
      * The URL <b>must</b> end with a trailing slash as the names referenced by
-     * {@link #prefsFiles} are resolved against it. If the trailing slash is
-     * missing, it will append it automatically and log a warning.
+     * {@link #buildOptionsFromConfiguration()} are resolved against it. If the
+     * trailing slash is missing, it will append it automatically and log a
+     * warning.
      * </p>
      * <p>
      * If this is not an absolute URL, it assumes that the value passed in is
@@ -77,8 +77,9 @@ public class FormatMojo extends AbstractMojo {
 
     /**
      * <p>
-     * This is the URL that points to the Java formatter profile XML. The contents
-     * of this will be merged into {@value PreferenceFileName#JDT_CORE}
+     * This is the URL that points to the Java formatter profile XML. The
+     * contents of this will be merged into
+     * {@value net.trajano.mojo.m2ecodestyle.internal.PreferenceFileName#JDT_CORE}
      * </p>
      * <p>
      * If this is not an absolute URL, it assumes that the value passed in is
@@ -130,7 +131,8 @@ public class FormatMojo extends AbstractMojo {
      *
      * @return configured code formatter
      * @throws MojoExecutionException
-     *             wraps any error that has occurred when building the formatter.
+     *             wraps any error that has occurred when building the
+     *             formatter.
      */
     private CodeFormatter buildFormatter() throws MojoExecutionException {
 
