@@ -63,9 +63,9 @@ public class ConfigureMojo extends AbstractMojo {
 
     /**
      * <p>
-     * This is the URL that points to the base URL where the mergable prefs files
-     * are located. If this is not provided, then merging of property files is not
-     * performed.
+     * This is the URL that points to the base URL where the mergable prefs
+     * files are located. If this is not provided, then merging of property
+     * files is not performed.
      * </p>
      * <p>
      * The URL <b>must</b> end with a trailing slash as the names referenced by
@@ -89,8 +89,8 @@ public class ConfigureMojo extends AbstractMojo {
 
     /**
      * <p>
-     * This is the URL that points to the Java cleanup profile XML. The contents of
-     * this will be merged into "org.eclipse.jdt.ui.prefs"
+     * This is the URL that points to the Java cleanup profile XML. The contents
+     * of this will be merged into "org.eclipse.jdt.ui.prefs"
      * </p>
      * <p>
      * If this is not an absolute URL, it assumes that the value passed in is
@@ -102,8 +102,9 @@ public class ConfigureMojo extends AbstractMojo {
 
     /**
      * <p>
-     * This is the URL that points to the Java formatter profile XML. The contents
-     * of this will be merged into {@value PreferenceFileName#JDT_CORE}
+     * This is the URL that points to the Java formatter profile XML. The
+     * contents of this will be merged into
+     * {@value net.trajano.mojo.m2ecodestyle.internal.PreferenceFileName#JDT_CORE}
      * </p>
      * <p>
      * If this is not an absolute URL, it assumes that the value passed in is
@@ -117,7 +118,8 @@ public class ConfigureMojo extends AbstractMojo {
     /**
      * <p>
      * This is the URL that points to the JavaScript cleanup profile XML. The
-     * contents of this will be merged into {@value PreferenceFileName#JSDT_UI}.
+     * contents of this will be merged into
+     * {@value net.trajano.mojo.m2ecodestyle.internal.PreferenceFileName#JSDT_UI}.
      * </p>
      * <p>
      * If this is not an absolute URL, it assumes that the value passed in is
@@ -130,7 +132,8 @@ public class ConfigureMojo extends AbstractMojo {
     /**
      * <p>
      * This is the URL that points to the JavaScript formatter profile XML. The
-     * contents of this will be merged into {@value PreferenceFileName#JSDT_CORE}.
+     * contents of this will be merged into
+     * {@value net.trajano.mojo.m2ecodestyle.internal.PreferenceFileName#JSDT_CORE}.
      * </p>
      * <p>
      * If this is not an absolute URL, it assumes that the value passed in is
@@ -155,8 +158,8 @@ public class ConfigureMojo extends AbstractMojo {
 
     /**
      * <p>
-     * This is the URL that points to the Java formatter profile XML. The contents
-     * of this will be merged into "org.eclipse.jdt.core.prefs"
+     * This is the URL that points to the Java formatter profile XML. The
+     * contents of this will be merged into "org.eclipse.jdt.core.prefs"
      * </p>
      * <p>
      * If this is not an absolute URL, it assumes that the value passed in is
@@ -167,10 +170,10 @@ public class ConfigureMojo extends AbstractMojo {
     private String javaTemplatesXmlUrl;
 
     /**
-     * A list of <em>prefs</em> files to load from the source. The contents of the
-     * <em>prefs</em> files will be merged with the existing <em>prefs</em> files if
-     * they already exist. This defaults to {@value #DEFAULT_PREFS} which are known
-     * <em>prefs</em> relating to code styles.
+     * A list of <em>prefs</em> files to load from the source. The contents of
+     * the <em>prefs</em> files will be merged with the existing <em>prefs</em>
+     * files if they already exist. This defaults to {@link #DEFAULT_PREFS}
+     * which are known <em>prefs</em> relating to code styles.
      */
     @Parameter(required = false)
     private List<String> prefsFiles;
