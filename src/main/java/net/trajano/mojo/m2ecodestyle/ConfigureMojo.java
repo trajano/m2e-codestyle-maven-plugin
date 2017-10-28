@@ -255,10 +255,8 @@ public class ConfigureMojo extends AbstractMojo {
 
     /**
      * Does the preference merge operations.
-     *
-     * @throws MojoExecutionException
      */
-    private void handlePreferenceMerge() throws MojoExecutionException {
+    private void handlePreferenceMerge() {
 
         if (prefsFiles == null) {
             prefsFiles = Arrays.asList(DEFAULT_PREFS);
